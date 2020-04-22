@@ -1,4 +1,5 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, Output, EventEmitter} from "@angular/core";
+//import {  } from 'protractor';
 
 @Component({
   selector:'conference-thumnail',
@@ -18,10 +19,13 @@ import { Component, Input } from "@angular/core";
         >
       </span>
     </div>
-    <button class="btn btn-primary" >Click me!</button>
   </div>
   `
 })
 export class ConferenceThumbnailComponent {
   @Input() event:any
+  someProperty:any = 'Some value'
+  logData(){
+    console.log('Ref var works')
+  }
 }

@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   <div class="container">
   <h1>Upcoming Conferences</h1>
   <hr />
-  <conference-thumnail [event]="conference"></conference-thumnail>
+  <conference-thumnail #thumbnail [event]="conference"></conference-thumnail>
+  <h3>{{thumbnail.someProperty}}</h3>
+  <button class="btn btn-primary" (click)="thumbnail.logData()">Click me!</button>
 </div>
   `
 })
@@ -23,6 +25,5 @@ export class ConferenceListComponent  {
       city: 'Ikeja. Lagos',
       country: 'Nigeria'
     }
-
   }
 }
