@@ -1,16 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
+import { ConferenceComponent } from './conference.component.';
+import { ConferenceListComponent } from './conference/conference-list.component';
+import {ConferenceThumbnailComponent} from './conference/conference-thumnail.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    ConferenceComponent,
+    ConferenceListComponent,
+    ConferenceThumbnailComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ConferenceComponent]
 })
 export class AppModule { }
